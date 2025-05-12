@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+
+  
+@layer utilities {
+    .bg-cream {
+      background-color: #FAF6E9;
+    }
+    .bg-light-green {
+        background-color: #DDEB9D;
+    }
+    .bg-dark-green {
+        background-color: #A0C878;
+    }
+    .text-cream {
+        color: #FAF6E9;
+    }
+    .text-dark-green {
+        color: #A0C878;
+    }
+  }
+  
