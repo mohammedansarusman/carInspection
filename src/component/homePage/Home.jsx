@@ -1,13 +1,10 @@
 import InspectionButton from "./InspectionButton";
+import Header from "./Header";
 import { Navigate, Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="bg-dark-green w-full h-screen">
-      <header className="w-full h-[20%] bg-dark-green text-cream flex justify-center items-center">
-        <h1 className="text-2xl font-semi-bold">
-          ANA Vehicle Inspection Report
-        </h1>
-      </header>
+      <Header />
       <section className="bg-cream w-full h-[60%] flex justify-center items-center px-[50px] text-gray-500">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
@@ -24,7 +21,7 @@ const Home = () => {
         </p>
       </section>
       <footer className="bg-dark-green w-full h-[20%] flex justify-end items-center px-[50px]">
-        <Link to="/customer">
+        <Link to="/categories">
           <InspectionButton />
         </Link>
       </footer>
