@@ -9,6 +9,8 @@ import FormInspection from "./component/subHome/FormInspection.jsx";
 import FormCheckList from "./component/subHome/FormCheckList.jsx";
 import FormCustomer from "./component/subHome/FormCustomer.jsx";
 import FormPreview from "./component/subHome/FormPreview.jsx";
+import { Provider } from "react-redux";
+import appStore from "./store/appStore.js";
 
 const appRouter = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -17,16 +19,18 @@ const appRouter = createBrowserRouter([
     element: <Categories />,
     children: [
       { path: "/categories/vehicle/", element: <FormVehicle /> },
-      { path: "/categories/inspection/", element: <FormInspection />},
-      { path: "/categories/checklist/", element: <FormCheckList />},
-      { path: "/categories/customer/", element: <FormCustomer />},
-      { path: "/categories/preview/", element: <FormPreview />},
+      { path: "/categories/inspection/", element: <FormInspection /> },
+      { path: "/categories/checklist/", element: <FormCheckList /> },
+      { path: "/categories/customer/", element: <FormCustomer /> },
+      { path: "/categories/preview/", element: <FormPreview /> },
     ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={appRouter} />
+    <Provider store={appStore}>
+      <RouterProvider router={appRouter} />
+    </Provider>
   </StrictMode>
 );
