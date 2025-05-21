@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const vehicleSlice = createSlice({
-  name: "vehilce",
+  name: "vehicle",
   initialState: {
-    plateNo: "DXB-ANSAR",
+    plateNo: "",
     chassisNo: "",
     manufacturer: "",
     brandName: "",
